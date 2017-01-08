@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script language="JavaScript">
+    var data=google.visualization.arrayToDataTable([
+                {% for key,value in user_verdicts.items %}
+                    ['{{key}}'--{{value}}],
+                    {% endfor %}
+                    ]);
+     document.write(data);
+    </script>
 </head>
 <body>
-    The list is:
-    {% for key,value in user_verdicts.items %}
-    <li>{{key}}--{{value}}</li>
-    {% endfor %}
+<script type="text/javascript" >document.write(data)</script>
 </body>
 </html>

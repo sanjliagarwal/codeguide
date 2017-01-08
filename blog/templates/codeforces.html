@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+  {% load static %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/sc.css' %}" />
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="codechef.html">Codechef</a></li>
+        <li><a href="hackerank.html">Hackerank</a></li>
+        <li class="active"><a href="codeforces.html">Code Forces</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="mainbody">
+<div class="container-fluid text-center">
+  <div class="row content1" style="border : 4px transparent solid">
+        <div class="col-sm-12 logo" style="height : 100px">
+        <p>logo to be placed here</p>
+        </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <div id="hexagon">
+      <p><a href="#"></a></p>
+        </div>
+      <p><a href="#">About Us</a></p>
+      <p><a href="#">Contact</a></p>
+    </div>
+    <div class="col-sm-10 text-left main-body">
+      <h1>C</h1><h2>ODE</h2><h1 style="color:darkgrey">F</h1><h2 style="color:darkgrey">ORCES</h2>
+        <div class="handle">
+          <h3>Please enter your code forces handle:</h3>
+          <form action="" method="post">
+              <input type="text" maxlength="30" class="textbox"/><br><br>
+              <button class="submitbutton" >Submit</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+</div>
+</body>
+</html>

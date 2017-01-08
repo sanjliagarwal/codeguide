@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -22,3 +23,5 @@ urlpatterns = [
     url(r'^pie$', views.view2, name='view1'),
     url(r'^chart$', views.view3, name="view3"),
 ]
+urlpatterns = urlpatterns + staticfiles_urlpatterns()
+

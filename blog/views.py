@@ -7,7 +7,7 @@ import urllib2
 from urllib2 import urlopen
 import json
 def index(request):
-    return HttpResponse("Welcome")
+    return render_to_response('codeforces.html')
 
 def view1(request):
     template=loader.get_template('blog/form.html')
@@ -95,5 +95,7 @@ def view3(request):
 
     handle = 'Black_Hammer96'
     get_user_data(handle)
-
-    return render_to_response('pie.html',{"user_verdicts":user_verdicts})
+    import demjson
+    obj = demjson.encode(user_verdicts)
+    user={"a":1,"b":2,"c":3}
+    return render_to_response('goog.html',{"user_verdicts":user_verdicts,"user":user})
